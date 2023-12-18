@@ -1,6 +1,4 @@
-#include <spdlog/spdlog.h>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include "context.h"
 
 void OnFramebufferSizeChange(GLFWwindow* window, const int width, const int height);
 void OnKeyEvent(GLFWwindow* window, const int key, const int scancode, const int action, const int mods);
@@ -55,16 +53,25 @@ int main(int argc, const char** argv)
     glfwSetFramebufferSizeCallback(window, OnFramebufferSizeChange);
     glfwSetKeyCallback(window, OnKeyEvent);
 
+    auto context = Context::Create();
+    if (!context)
+    {
+        SPDLOG_ERROR("Failed to create context");
+        glfwTerminate();
+        return -1;
+    }
+
     // ... loop 시작 부분
 
     // glfw 루프 실행, 윈도우 close 버튼을 누르면 정상 종료
     SPDLOG_INFO("Start main loop");
     while (!glfwWindowShouldClose(window)) 
     {
-        Render();
+        context->Render();
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+    context.reset();
 
     glfwTerminate();
     return 0;

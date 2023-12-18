@@ -1,14 +1,20 @@
 cmake_minimum_required(VERSION 3.13)
 
-set(PROJECT_NAME first_opengl_example)
+set(PROJECT_NAME point_project)
 set(CMAKE_CXX_STANDARD 17)
 
-set(WINDOW_NAME "First OpenGL Example")
+set(WINDOW_NAME "Point Project")
 set(WINDOW_WIDTH 1280)
 set(WINDOW_HEIGHT 720)
 
 project(${PROJECT_NAME})
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/common.cpp  src/common.h
+    src/shader.cpp  src/shader.h
+    src/program.cpp src/program.h
+    src/context.cpp src/context.h
+)
 
 include(Dependency.cmake)
 

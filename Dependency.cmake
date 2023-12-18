@@ -25,7 +25,7 @@ set(DEP_LIBS ${DEP_LIBS} spdlog$<$<CONFIG:Debug>:d>)
 ExternalProject_Add(
     dep_glfw
     GIT_REPOSITORY "https://github.com/glfw/glfw.git"
-    GIT_TAG "3.3.3"
+    GIT_TAG "3.3.9"
     GIT_SHALLOW 1
     UPDATE_COMMAND ""
     PATCH_COMMAND ""
