@@ -17,10 +17,10 @@ reference
 
 ---
 Study History
-> Cmake Example (2023.12.15)
+> 1.  [Cmake Example](https://github.com/judah2023/OpenGL-course-by-Rinthel/tree/00-cmake_project_example) (2023.12.15)
 > 
-> First OpenGL (2023.12.16)
+> 2. [First OpenGL](https://github.com/judah2023/OpenGL-course-by-Rinthel/tree/01-first_opengl_example) (2023.12.16)
 > 
-> Point Example (2023.12.17)
+> 3. [Point Example](https://github.com/judah2023/OpenGL-course-by-Rinthel/tree/02-point_example) (2023.12.17)
 > 
-> Trangle Example (2023.12.18)
+> 4. [Trangle Example](https://github.com/judah2023/OpenGL-course-by-Rinthel/tree/03-triangle_example) (2023.12.18)
