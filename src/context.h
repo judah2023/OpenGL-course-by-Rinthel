@@ -1,8 +1,11 @@
 #pragma once
 
 #include "common.h"
-#include "shader.h"
+
+#include "buffer.h"
 #include "program.h"
+#include "shader.h"
+#include "vertex_layout.h"
 
 CLASS_PTR(Context)
 class Context
@@ -19,5 +22,9 @@ private:
 
 private:
     ProgramUPtr m_program;
+
+    VertexLayoutUPtr m_vertexArrayObject;
+    BufferUPtr m_vertexBuffer;
+    BufferUPtr m_indexBuffer;
 
 };

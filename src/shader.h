@@ -2,8 +2,6 @@
 
 #include "common.h"
 
-// ... 본문은 여기에
-
 CLASS_PTR(Shader);
 class Shader
 {

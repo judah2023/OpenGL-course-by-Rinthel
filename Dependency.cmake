@@ -8,7 +8,7 @@ set(DEP_LIB_DIR ${DEP_INSTALL_DIR}/lib)
 
 # spdlog: fast logger library
 ExternalProject_Add(
-    dep-spdlog
+    dep_spdlog
     GIT_REPOSITORY "https://github.com/gabime/spdlog.git"
     GIT_TAG "v1.x"
     GIT_SHALLOW 1
@@ -18,7 +18,7 @@ ExternalProject_Add(
     TEST_COMMAND ""
 )
 # Dependency 리스트 및 라이브러리 파일 리스트 추가
-set(DEP_LIST ${DEP_LIST} dep-spdlog)
+set(DEP_LIST ${DEP_LIST} dep_spdlog)
 set(DEP_LIBS ${DEP_LIBS} spdlog$<$<CONFIG:Debug>:d>)
 
 # glfw
